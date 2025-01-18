@@ -129,10 +129,10 @@
      <string>Refresh</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_TX_CALI">
+   <widget class="QPushButton" name="PB_TX_SEQSTART">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>680</x>
       <y>700</y>
       <width>100</width>
       <height>100</height>
@@ -143,10 +143,10 @@
 Start</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_TX_NAV_RESET">
+   <widget class="QPushButton" name="PB_TX_SV1">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>20</x>
       <y>700</y>
       <width>140</width>
       <height>40</height>
@@ -156,10 +156,10 @@ Start</string>
      <string>SV1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_TX_CALI_4">
+   <widget class="QPushButton" name="PB_LOG">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>500</x>
       <y>700</y>
       <width>160</width>
       <height>100</height>
@@ -167,19 +167,6 @@ Start</string>
     </property>
     <property name="text">
      <string>LOG Start</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="PB_TX_CALI_5">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>700</y>
-      <width>100</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ARM</string>
     </property>
    </widget>
    <widget class="PlotWidget" name="plot_tc1" native="true">
@@ -222,10 +209,10 @@ Start</string>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_TX_NAV_RESET_2">
+   <widget class="QPushButton" name="PB_TX_SV2">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>180</x>
       <y>700</y>
       <width>140</width>
       <height>40</height>
@@ -235,10 +222,10 @@ Start</string>
      <string>SV2</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="PB_TX_NAV_RESET_3">
+   <widget class="QPushButton" name="PB_TX_IG">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>340</x>
       <y>700</y>
       <width>140</width>
       <height>40</height>
@@ -399,6 +386,20 @@ Start</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_SEQSTOP">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>700</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sequence
+STOP</string>
     </property>
    </widget>
   </widget>
