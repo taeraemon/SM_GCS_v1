@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1340</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SM Command Center v0.0.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>80</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>TX</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TE_TX_JSON">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>100</y>
+      <width>400</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>170</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RX</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TE_RX_JSON">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>190</y>
+      <width>400</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="LE_SER_BAUD">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>770</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>921600</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_SER_CONN">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>770</y>
+      <width>100</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect Serial</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="CB_SER_PORT">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>770</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_SER_REFRESH">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>770</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refresh</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_CALI">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>700</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sequence
+Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_NAV_RESET">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>700</y>
+      <width>140</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SV1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_CALI_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>700</y>
+      <width>160</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LOG Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_CALI_5">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>700</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ARM</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_tc1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>300</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_tc2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>300</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_lc1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>80</y>
+      <width>600</width>
+      <height>400</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TE_RX_DEBUG">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>720</y>
+      <width>400</width>
+      <height>90</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_NAV_RESET_2">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>700</y>
+      <width>140</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SV2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PB_TX_NAV_RESET_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>700</y>
+      <width>140</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IG</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_tc3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>300</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_pt1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>480</y>
+      <width>300</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="plot_pt2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>480</y>
+      <width>300</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>700</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RX Debug</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>20</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sequnce Timer : </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>20</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>20</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Mode : </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>200</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1340</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
