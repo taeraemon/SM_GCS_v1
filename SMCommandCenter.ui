@@ -79,6 +79,13 @@
       <height>500</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
    </widget>
    <widget class="QLineEdit" name="LE_SER_BAUD">
     <property name="geometry">
