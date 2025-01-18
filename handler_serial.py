@@ -57,7 +57,9 @@ class HandlerSerial:
                     # self.controller.plot_handler_pt3.update_plot(recv_pt3_raw)
                     self.controller.plot_handler_lc1.update_plot(recv_lc1_raw)
 
-                    self.controller.ui.TE_RX_JSON.setText(line)
+                    # self.controller.ui.TE_RX_JSON.setText(line)
+                    pretty_data = json.dumps(data, indent=4, ensure_ascii=False)  # 보기 좋게 포매팅
+                    self.controller.ui.TE_RX_JSON.setText(pretty_data)
                 except ValueError:
                     print(f"Invalid data: {line}")
             else:
