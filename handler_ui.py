@@ -111,5 +111,7 @@ class HandlerUI(QMainWindow, form_class):
     def start_log(self):
         if self.PB_LOG.isChecked():
             print('log start')  # TODO : implement
+            self.serial_handler.log_start()
         else:
             print('log stop')
+            self.serial_handler.log_stop()

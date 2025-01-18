@@ -1,3 +1,4 @@
+import os
 from PyQt5.QtSerialPort import QSerialPort
 from PyQt5.QtCore import QIODevice
 from PyQt5.QtWidgets import QMessageBox
@@ -5,10 +6,30 @@ import json
 from datetime import datetime
 
 class HandlerSerial:
+    f_rx = None
+    log_flag = False
+    
     def __init__(self, controller):
         self.controller = controller
         self.serial_port = QSerialPort()
         self.serial_connected = False
+
+    def log_start(self):
+        self.log_flag = True
+
+        # Get the directory of the current script
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Construct the log file path relative to the script directory
+        log_dir = os.path.join(base_dir, 'log')
+        os.makedirs(log_dir, exist_ok=True)  # Ensure the directory exists
+
+        log_file = os.path.join(log_dir, datetime.now().strftime('%Y%m%d_%H%M%S') + '_rx.csv')
+        self.f_rx = open(log_file, "w")
+
+    def log_stop(self):
+        self.log_flag = False
+        self.f_rx.close()
 
     def connect_serial(self):
         selected_port = self.controller.ui.CB_SER_PORT.currentData()
@@ -60,6 +81,9 @@ class HandlerSerial:
                     # self.controller.ui.TE_RX_JSON.setText(line)
                     pretty_data = json.dumps(data, indent=4, ensure_ascii=False)  # 보기 좋게 포매팅
                     self.controller.ui.TE_RX_JSON.setText(pretty_data)
+
+                    if self.log_flag:
+                        self.f_rx.write(str(data)+'\n')
                 except ValueError:
                     print(f"Invalid data: {line}")
             else:
